@@ -6,7 +6,7 @@ export const bncAudience = 'https://api.bravenewcoin.com';
 export const bncClientId = 'oCdQoZoI96ERE9HY3sQ7JmbACfBf55RY';
 export const bncHost = 'bravenewcoin.p.rapidapi.com';
 //  See https://rapidapi.com/BraveNewCoin/api/bravenewcoin/pricing for a valid API key.
-export const bncKey = '18e0320fb8msh591358e90b4ed56p1a8e84jsn774229aa559f';
+export const bncKey = '';
 
 export const btcAssetId = 'f1ff77b6-3ab4-4719-9ded-2fc7e71cff1f';
 export const unknownAssetId = '4c486ca3-1ee3-4f9c-83a2-748c5852065a';
