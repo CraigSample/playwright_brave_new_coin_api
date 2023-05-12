@@ -1,8 +1,4 @@
-# BraveNewCoin API Regression Suite
-
-A short playwright example using the BraveNewCoin API.
-
-Note this is a current WIP.
+# Zinnia test
 
 ### Prerequisites:
 
@@ -24,4 +20,4 @@ Note this is a current WIP.
 ## Running Tests
 
 - run the API tests:
-  `npx playwright test --project='bravenewcoin'`
+  `npx playwright test --project=api`

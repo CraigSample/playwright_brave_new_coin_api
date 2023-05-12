@@ -1,6 +1,0 @@
-node_modules/
-/test-results/
-# This is usually ignored, but has been kept for report example purposes.
-# /playwright-report/
-/playwright/.cache/
-.github
