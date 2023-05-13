@@ -75,7 +75,7 @@ test('TC-@4 Test @listAssets endpoint with the type parameter.', async ({ reques
   });
 });
 
-test('TC-@5 @negative Test @listAssets endpoint with an invalid symbol parameter.', async ({
+test('TC-@5 @negative Test @listAssets endpoint with an invalid symbol parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -94,7 +94,7 @@ test('TC-@5 @negative Test @listAssets endpoint with an invalid symbol parameter
   });
 });
 
-test('TC-@6 @negative Test @listAssets endpoint with an invalid status parameter.', async ({
+test('TC-@6 @negative Test @listAssets endpoint with an invalid status parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -115,7 +115,7 @@ test('TC-@6 @negative Test @listAssets endpoint with an invalid status parameter
   });
 });
 
-test('TC-@7 @negative Test @listAssets endpoint with an invalid type parameter.', async ({
+test('TC-@7 @negative Test @listAssets endpoint with an invalid type parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
