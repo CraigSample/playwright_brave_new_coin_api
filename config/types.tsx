@@ -32,3 +32,9 @@ export type ListAssetsEntry = {
 export type ListAssetsResponse = {
   content: ListAssetsEntry[];
 };
+
+export type GenericBadRequest = {
+  status: string;
+  timestamp: string;
+  message: string;
+};
