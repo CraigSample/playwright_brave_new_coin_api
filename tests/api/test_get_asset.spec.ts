@@ -1,14 +1,13 @@
 import { BraveNewWorldApi } from 'apiHelpers/braveNewCoinApi';
-import * as types from 'config/types';
 import { validateListAssets } from 'support/validations';
 
-import { expect, test } from '@playwright/test';
+import { test } from '@playwright/test';
 
 const endpointName = 'listAssets';
 
 // TODO: Add remaining tests and documentation for each test case - WIP.
 
-test('TC-@1 Test @listAssets endpoint with no parameters.', async ({ request }) => {
+test('TC-@asset_1 Test @listAssets endpoint with no parameters.', async ({ request }) => {
   const api = new BraveNewWorldApi(request);
 
   const apiResponse = await test.step(
@@ -24,7 +23,7 @@ test('TC-@1 Test @listAssets endpoint with no parameters.', async ({ request }) 
   });
 });
 
-test('TC-@2 Test @listAssets endpoint with the symbol parameter.', async ({ request }) => {
+test('TC-@asset_2 Test @listAssets endpoint with the symbol parameter.', async ({ request }) => {
   const symbol = 'DOT';
   const api = new BraveNewWorldApi(request);
 
@@ -41,7 +40,7 @@ test('TC-@2 Test @listAssets endpoint with the symbol parameter.', async ({ requ
   });
 });
 
-test('TC-@3 Test @listAssets endpoint with the status parameter.', async ({ request }) => {
+test('TC-@asset_3 Test @listAssets endpoint with the status parameter.', async ({ request }) => {
   const api = new BraveNewWorldApi(request);
   const status = 'INACTIVE';
 
@@ -58,7 +57,7 @@ test('TC-@3 Test @listAssets endpoint with the status parameter.', async ({ requ
   });
 });
 
-test('TC-@4 Test @listAssets endpoint with the type parameter.', async ({ request }) => {
+test('TC-@asset_4 Test @listAssets endpoint with the type parameter.', async ({ request }) => {
   const api = new BraveNewWorldApi(request);
   const assetType = 'FIAT';
 
@@ -75,7 +74,7 @@ test('TC-@4 Test @listAssets endpoint with the type parameter.', async ({ reques
   });
 });
 
-test('TC-@5 @negative Test @listAssets endpoint with an invalid symbol parameter: unknown.', async ({
+test('TC-@asset_5 @negative Test @listAssets endpoint with an invalid symbol parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -94,7 +93,7 @@ test('TC-@5 @negative Test @listAssets endpoint with an invalid symbol parameter
   });
 });
 
-test('TC-@6 @negative Test @listAssets endpoint with an invalid status parameter: unknown.', async ({
+test('TC-@asset_6 @negative Test @listAssets endpoint with an invalid status parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -115,7 +114,7 @@ test('TC-@6 @negative Test @listAssets endpoint with an invalid status parameter
   });
 });
 
-test('TC-@7 @negative Test @listAssets endpoint with an invalid type parameter: unknown.', async ({
+test('TC-@asset_7 @negative Test @listAssets endpoint with an invalid type parameter: unknown.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -136,7 +135,7 @@ test('TC-@7 @negative Test @listAssets endpoint with an invalid type parameter: 
   });
 });
 
-test('TC-@8 @negative Test @listAssets endpoint with an invalid symbol parameter: lower case.', async ({
+test('TC-@asset_8 @negative Test @listAssets endpoint with an invalid symbol parameter: lower case.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -155,7 +154,7 @@ test('TC-@8 @negative Test @listAssets endpoint with an invalid symbol parameter
   });
 });
 
-test('TC-@9 @negative Test @listAssets endpoint with an invalid status parameter: lower case.', async ({
+test('TC-@asset_9 @negative Test @listAssets endpoint with an invalid status parameter: lower case.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
@@ -176,7 +175,7 @@ test('TC-@9 @negative Test @listAssets endpoint with an invalid status parameter
   });
 });
 
-test('TC-@10 @negative Test @listAssets endpoint with an invalid type parameter: lower case.', async ({
+test('TC-@asset_10 @negative Test @listAssets endpoint with an invalid type parameter: lower case.', async ({
   request
 }) => {
   const api = new BraveNewWorldApi(request);
