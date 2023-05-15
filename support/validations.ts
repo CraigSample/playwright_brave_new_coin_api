@@ -1,8 +1,32 @@
 import * as constants from 'config/constants';
 import * as types from 'config/types';
-import { prettyPrintJson } from 'support/miscUtils';
+import { isJwtToken, prettyPrintJson } from 'support/miscUtils';
 
 import { APIResponse, expect } from '@playwright/test';
+
+export async function validateClientCredentials(response: APIResponse) {
+  expect(response.ok()).toBeTruthy();
+  const responseJson: types.AccessTokenResponse = await response.json();
+
+  expect(
+    isJwtToken(responseJson.access_token),
+    'The returned access_token value is expected to be a valid jwt token. Found: ' +
+      prettyPrintJson(responseJson.access_token)
+  ).toBeTruthy();
+  expect(
+    isInt(responseJson.expires_in),
+    'The returned expires_in value is expected to be an integer. Found: ' + responseJson.expires_in
+  ).toBeTruthy();
+  expect(
+    responseJson.expires_in,
+    'The returned expires_in value is expected to be less than or equal to 86400. Found: ' +
+      responseJson.expires_in
+  ).toBeLessThanOrEqual(86400);
+  expect(
+    responseJson.token_type,
+    "The returned token_type value expected to be 'Bearer'. Found: " + responseJson.token_type
+  ).toBe('Bearer');
+}
 
 /**
  * Validate the JSON response of the GET /asset request.

@@ -13,5 +13,6 @@ export const unknownAssetId = '4c486ca3-1ee3-4f9c-83a2-748c5852065a';
 export const usdAssetId = 'e77b9824-126a-418e-a69c-a2e682578e94';
 
 export const sessionTimeout = 120;
+export const jwtRegex = /^[A-Za-z0-9_-]{2,}(?:\.[A-Za-z0-9_-]{2,}){2}$/;
 export const uuidRegex =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;

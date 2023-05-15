@@ -327,7 +327,12 @@ export class BraveNewWorldApi {
     payload: types.AccessTokenRequest
   ): Promise<APIResponse> {
     const requestOptions = {
-      data: payload.toString()
+      headers: {
+        'content-type': 'application/json',
+        'X-RapidAPI-Key': constants.bncKey,
+        'X-RapidAPI-Host': constants.bncHost
+      },
+      data: JSON.stringify(payload)
     };
 
     const url = constants.baseURL + '/oauth/token';
